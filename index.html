@@ -14,7 +14,7 @@
     </section>
     <section class="">
         <h1 class="h1 mb1">Docker</h1>
-        <p>A docker programokat futtat a container-ekben (mint pl. nginx, Apache, MySQL vagy Wordpress/Drupal). Ezeket az operációs rendszeredtől külön futtathatod. Szóval ahelyett hogy felépítenél egy alkalmazást egy gépen és megpróbálnád ugyanazt másolni csak simán futattod a container-t és ugyanaz lesz Mac-en, Linuxon és Windowson is. Ha működik a te gépeden, működik a szerveren és az összes gépen. Dockerrel több projekt is elkülönítve mardhat és könnyebb kezdeni valaki más projektjével (nem kell feltelepíteni az összes eszközt/dependenciest). Egy Virtuális géphez képest kevesebb erőforrást használ, kevesebb helyet foglal és gyorsabban indul.</p>
+        <p>A docker programokat futtat a container-ekben (mint pl. nginx, Apache, MySQL vagy Wordpress/Drupal). Ezeket az operációs rendszeredtől külön futtathatod. Szóval ahelyett hogy felépítenél egy alkalmazást egy gépen és megpróbálnád ugyanazt másolni csak simán futattod a container-t és ugyanaz lesz Mac-en, Linuxon és Windowson is. Ha működik a te gépeden, működik a szerveren és az összes gépen. Dockerrel több projekt is elkülönítve maradhat és könnyebb kezdeni valaki más projektjével (nem kell feltelepíteni az összes eszközt/dependenciest). Egy Virtuális géphez képest kevesebb erőforrást használ, kevesebb helyet foglal és gyorsabban indul.</p>
     </section>
     <section class="mt4">
         <h2 class="h2 mb1">Image és container</h2>
@@ -27,12 +27,48 @@
             <li>A dockerfile meghatározza hogy milyen lesz az image (tervrajz)</li>
             <li>Nem építhetsz házat tervrajz nélkül</li>
             <li>A ház tervrajzát DockerHubról tudod megszerezni vagy Dockerfileból</li>
-            <li>Elindítani egy containert olyan mint felépíteni egy házat és kinyitni az ajtaját</li>
+            <li>Elindítani elsőre egy containert olyan mint felépíteni egy házat és kinyitni az ajtaját</li>
             <li>Megállítani egy containert olyan mint bezárni az ajtót</li>
             <li>Törölni egy containert olyan mint lebontani a házat</li>
         </ul>
     </section>
-    
+    <section class="mt4">
+        <h2 class="h2 mb1">Hasznos parancsok</h2>
+        <div class="mb2">
+            <p class="bold">docker container run -d -p 80:80 nginx</p>
+        <ol class="">
+            <li>Keresi az nginx image-t az image gyorsítótárban (cache)</li>
+            <li>Ha nincs a gyorsítótárban, felkeresi az image repo-t Dockerhubról</li>
+            <li>Leszedi a legújabb verziót, elmenti a gyorsítótárba</li>
+            <li>Elindítja egy új container-ben</li>
+            <li>a 80 as port a host a container port 80-on</li>
+        </ol>
+        </div>
+        <div class="mb2">
+            <p class="bold">docker container ls -a</p>
+            <p>megmutatja az összes containert (ami fut azt is)</p>
+        </div>
+        <div class="mb2">
+            <p class="bold">docker container stop [ID]</p>
+            <p>megállítja a containert</p>
+        </div>
+        <div class="mb2">
+            <p class="bold">docker container rm -f [ID]</p>
+            <p>Force törli a containert (így nem kell megállítani)</p>
+        </div>
+        <div class="mb2">
+            <p class="bold">docker image ls</p>
+            <p>megmutatja az összes imaget amit le van szedve</p>
+        </div>
+        <div class="mb2">
+            <p class="bold">docker pull [image]</p>
+            <p>Leszedi az adott imaget</p>
+        </div>
+        <div class="mb2">
+            <p class="bold">docker image rm [image]</p>
+            <p>Törli az adott imaget</p>
+        </div>
+    </section>
 
 </body>
 </html>
