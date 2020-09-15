@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Docker and Webpack explained</title>
+</head>
+<body class="mx-auto mb4">
+    <section class="section__img">
+        <img src="assets/img/docker_logo.png" class="img" alt="Docker logo">
+    </section>
+    <section class="">
+        <h1 class="h1 mb1">Docker</h1>
+        <p>A docker programokat futtat a container-ekben (mint pl. nginx, Apache, MySQL vagy Wordpress/Drupal). Ezeket az operációs rendszeredtől külön futtathatod. Szóval ahelyett hogy felépítenél egy alkalmazást egy gépen és megpróbálnád ugyanazt másolni csak simán futattod a container-t és ugyanaz lesz Mac-en, Linuxon és Windowson is. Ha működik a te gépeden, működik a szerveren és az összes gépen. Dockerrel több projekt is elkülönítve mardhat és könnyebb kezdeni valaki más projektjével (nem kell feltelepíteni az összes eszközt/dependenciest). Egy Virtuális géphez képest kevesebb erőforrást használ, kevesebb helyet foglal és gyorsabban indul.</p>
+    </section>
+    <section class="mt4">
+        <h2 class="h2 mb1">Image és container</h2>
+        <div class="mt1 mb3 flex items-baseline justify-around">
+            <img src="assets/img/image.png" height="100px" alt="">
+            <img src="assets/img/container.png" height="150px" alt="">
+        </div>
+        <ul>
+            <li>Az image olyan mint egy tervrajz, a container olyan mint egy ház</li>
+            <li>A dockerfile meghatározza hogy milyen lesz az image (tervrajz)</li>
+            <li>Nem építhetsz házat tervrajz nélkül</li>
+            <li>A ház tervrajzát DockerHubról tudod megszerezni vagy Dockerfileból</li>
+            <li>Elindítani egy containert olyan mint felépíteni egy házat és kinyitni az ajtaját</li>
+            <li>Megállítani egy containert olyan mint bezárni az ajtót</li>
+            <li>Törölni egy containert olyan mint lebontani a házat</li>
+        </ul>
+    </section>
+    
+
+</body>
+</html>
